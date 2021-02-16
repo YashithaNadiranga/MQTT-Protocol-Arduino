@@ -59,7 +59,7 @@ void setup(){
   WiFi.disconnect();
   delay(3000);
   Serial.println("START");
-  WiFi.begin("Yashitha-Personal-4G","ymax26574ymax");
+  WiFi.begin("-SSID","-PASSWORD");
   while ((!(WiFi.status() == WL_CONNECTED))){
     delay(300);
     Serial.print("..");

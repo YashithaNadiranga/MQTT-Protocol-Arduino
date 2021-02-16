@@ -11,8 +11,8 @@ void reconnectmqttserver() {
     clientId += String(random(0xffff), HEX);
      if (client.connect(clientId.c_str())) {
       Serial.println("connected");
-      client.subscribe("LED");
-      client.subscribe("RADIO");
+      client.subscribe("LED26574");
+      client.subscribe("RADIO26574");
      } else {
        Serial.print("failed, rc=");
        Serial.print(client.state());
@@ -82,7 +82,7 @@ void loop()
     }
     client.loop();
 //    snprintf (msgmqtt, 50, "%d ",i);
-//    client.publish("LED2", msgmqtt);
+    client.publish("NODERESPONCE26574", "1");
 //    i = i + 1;
 //    delay(1000);
 
